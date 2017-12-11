@@ -13,7 +13,6 @@ var once sync.Once
 
 // Initialize Singleton Task Queue. Thread Safe. HA for Scheduler
 func TaskQueue(length int) *taskQueue{
-
 	once.Do(func(){
 		queue = &taskQueue{
 			queue: make(chan Task, length),

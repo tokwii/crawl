@@ -10,3 +10,5 @@ vendor/
 # CMake
 CMakeLists.txt
 
+# Text file
+*.txt

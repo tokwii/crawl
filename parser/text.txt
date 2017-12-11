@@ -1,0 +1,688 @@
+Start of line...
+
+
+<script>
+<script>
+<script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=472beb185dc3d62d59bcf893499ebf45">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+<title>
+<style>
+<style type="text/css">
+<link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css">
+<script type="text/javascript">
+<script src="http://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=8a635a4514a95df9615127e354b374d0">
+<meta charset="utf-8">
+<script type="application/ld+json">
+<body>
+<div id="border">
+<div id="header">
+<img src ="http://www.gravatar.com/avatar/c833be5582482777b51b8fc73e8b0586?s=128&d=identicon&r=PG">
+<h1>
+<a href="/">
+<p id="description">
+<form action="/search" method="get">
+<span class="submit">
+<ul>
+<li>
+<a href="/about">
+<li>
+<a href="/archive">
+<li>
+<a href="/random">
+<li>
+<a href="http://tomblomfield.com/rss">
+<ol id="posts">
+<li class="post" id="post136759441870">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/136759441870/when-to-join-a-startup">
+<a title="Link to everything posted this day"
+          href="/day/2016/01/14"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/136759441870/when-to-join-a-startup#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p>
+<i>
+<i>
+<p>
+<i>
+<br>
+<p>
+<b>
+<p>
+<p>
+<p>
+<p>
+<p>
+<br>
+<p>
+<b>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<b>
+<p>
+<p>
+<br>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<b>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<b>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<p>
+<br>
+<p>
+<br>
+<p>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D10900462&t=MDJmYzgxZjhiYmE2YTI2NDA2NzQzMTFjNmM1ODcxMDhhMTE0MTQ5NixGYURLczdPSg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F136759441870%2Fwhen-to-join-a-startup&m=1-startup&amp;m=1">
+<div class="clear">
+<li class="post" id="post135120600360">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/135120600360/five-unbreakable-rules-for-startups">
+<a title="Link to everything posted this day"
+          href="/day/2015/12/13"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/135120600360/five-unbreakable-rules-for-startups#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fpaulgraham.com%2Farticles.html&t=ODQzOWU3NjU1NDU3MTQyMDlhNjE1ZDE2MzFkYzAyMjIwNGZhZDk5MixvR0R2NUY1TA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F135120600360%2Ffive-unbreakable-rules-for-startups&m=1startups&amp;m=1">
+<p>
+<b>
+<p>
+<p>
+<p>
+<p>
+<b>
+<p>
+<p>
+<br>
+<br>
+<p>
+<p>
+<b>
+<p>
+<p>
+<p>
+<p>
+<b>
+<br>
+<b>
+<br>
+<b>
+<p>
+<p>
+<p>
+<br>
+<br>
+<b>
+<p>
+<p>
+<p>
+<b>
+<p>
+<br>
+<div class="clear">
+<li class="post" id="post132810390155">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/132810390155/getting-shit-done">
+<a title="Link to everything posted this day"
+          href="/day/2015/11/08"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/132810390155/getting-shit-done#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p>
+<p>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIllusory_superiority&t=OWNmZmNiNjg5ZDY3M2IzZmYyMjdmNjgxNjE1NjU4MmYwMjA1N2Q1Niw1cE0wM1B1Sw%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F132810390155%2Fgetting-shit-done&m=1hit-done&amp;m=1">
+<p>
+<i>
+<br>
+<p>
+<br>
+<p>
+<i>
+<p>
+<p>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.paulgraham.com%2Frelres.html&t=OWE2MTQzYmY0YTM0OTFjNjRiMjc2ZTNhODI4NjBhZmE0NWQzMjY4ZCw1cE0wM1B1Sw%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F132810390155%2Fgetting-shit-done&m=1hit-done&amp;m=1">
+<p>
+<p>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.bhorowitz.com%2Fwhy_is_it_hard_to_bring_big_company_execs_into_little_companies&t=MmE3OTg3ZTkyM2UxY2FiYjYxM2JmZjViYmE0NDBiMDcxM2U2MzhmYSw1cE0wM1B1Sw%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F132810390155%2Fgetting-shit-done&m=1hit-done&amp;m=1">
+<br>
+<p>
+<p>
+<i>
+<i>
+<div class="clear">
+<li class="post" id="post97304410500">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/97304410500/apple-is-propping-up-a-fundamentally-broken">
+<a title="Link to everything posted this day"
+          href="/day/2014/09/12"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/97304410500/apple-is-propping-up-a-fundamentally-broken#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p class="p1">
+<span>
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fa16z.com%2F2014%2F09%2F09%2Fa16z-podcast-apple-takes-on-payments-and-your-wrist%2F%2520&t=OTQwZTJmNzJiZDA2MjIyOTQzNDQ5M2VlODE0ODQyNjQxNTRjYTI5NyxURGF5WE5Teg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F97304410500%2Fapple-is-propping-up-a-fundamentally-broken&m=1y-broken&amp;m=1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdanielbower.com%2Fpost%2F97211428585%2Ffrictionless-credit-cards&t=ZDk1MGM5N2UwZTM0ZjdlYmI2YTQxZjRmZTRmYjFhMGM4ODczYmQ3MixURGF5WE5Teg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F97304410500%2Fapple-is-propping-up-a-fundamentally-broken&m=1y-broken&amp;m=1">
+<p class="p1">
+<ul class="ul1">
+<li class="li3">
+<li class="li3">
+<li class="li3">
+<li class="li3">
+<li class="li3">
+<li class="li3">
+<p class="p1">
+<p class="p1">
+<p class="p3">
+<p class="p3">
+<p class="p3">
+<p>
+<a href="http://tomblomfield.com/post/97304410500/apple-is-propping-up-a-fundamentally-broken-payments">
+<div class="clear">
+<li class="post" id="post81105143223">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/81105143223/customer-churn-can-kill-your-startup">
+<a title="Link to everything posted this day"
+          href="/day/2014/07/10"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/81105143223/customer-churn-can-kill-your-startup#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.paulgraham.com%2Fgrowth.html&t=MDM5ZWZmMWMxNDljZWEyNTIzZWFmYjJlZjYxZWFmNjFhYWM2NDQ1MSxPNkVtNVN4cQ%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F81105143223%2Fcustomer-churn-can-kill-your-startup&m=1-startup&amp;m=1">
+<p class="p1">
+<p class="p2">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<p class="p2">
+<p class="p2">
+<p class="p2">
+<p class="p2">
+<img alt="image" src="http://78.media.tumblr.com/b85a6d5d56c36b155d13ac7d2684d98a/tumblr_inline_n37sy2AZA91r5tr1m.png">
+<p>
+<p class="p2">
+<em>
+<strong>
+<p class="p2">
+<p class="p2">
+<img alt="image" src="http://78.media.tumblr.com/76dea195e0390191ceeefba0effbdce9/tumblr_inline_n37sxtY37t1r5tr1m.png">
+<p>
+<span>
+<p class="p2">
+<span>
+<strong>
+<p class="p2">
+<p class="p2">
+<span>
+<strong>
+<strong>
+<p class="p2">
+<p class="p2">
+<strong>
+<p class="p2">
+<strong>
+<span>
+<p class="p2">
+<p class="p2">
+<p class="p2">
+<span>
+<strong>
+<br>
+<span>
+<span>
+<p class="p2">
+<span>
+<strong>
+<p class="p2">
+<p class="p2">
+<p class="p2">
+<p>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D8015917&t=YzhlN2NlYTA4NzM5NWI2N2UzZDdkNDZhZDg1YzNkNDMwZWJkOWQ2OSxPNkVtNVN4cQ%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F81105143223%2Fcustomer-churn-can-kill-your-startup&m=1-startup&amp;m=1">
+<div class="clear">
+<li class="post" id="post81111938563">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/81111938563/growth">
+<a title="Link to everything posted this day"
+          href="/day/2014/03/29"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/81111938563/growth#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p>
+<strong>
+<p>
+<em>
+<p>
+<p>
+<em>
+<p>
+<p>
+<p>
+<em>
+<p>
+<em>
+<p>
+<em>
+<div class="clear">
+<li class="post" id="post62619282797">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/62619282797/startup-series-part-4-deadlines">
+<a title="Link to everything posted this day"
+          href="/day/2013/09/29"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/62619282797/startup-series-part-4-deadlines#disqus_thread" class="meta comments_link">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdilbert.com%2Fstrips%2Fcomic%2F2000-05-21&t=ZTg4YmRlODBjYjEwYTFlOTZmNDVkYzdlMzM2OGFhOTQzNjI5N2M1YSxMZjZRTWV3eA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62619282797%2Fstartup-series-part-4-deadlines&m=1eadlines&amp;m=1">
+<img alt="image" src="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/6000/300/6379/6379.strip.sunday.gif">
+<p>
+<p>
+<p>
+<strong>
+<p>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAgile_software_development&t=MGZmYzRhMDMzMDgzYzAxODRiMTRhMTRiYTFhNWZjYTAwNWNiOGI3OCxMZjZRTWV3eA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62619282797%2Fstartup-series-part-4-deadlines&m=1eadlines&amp;m=1">
+<p>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPlanning_poker&t=NDNkYWJjN2ZiNjVhNzQzOTdjMDQ4Yjk4MTFhZjcwYTJlMDdiMzEwMSxMZjZRTWV3eA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62619282797%2Fstartup-series-part-4-deadlines&m=1eadlines&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.joelonsoftware.com%2Fitems%2F2007%2F10%2F26.html&t=MDM3MThkZmJjMTI1MGY2NjlhYjU0NGY5ZWI0ZGJjZWZmNzQ5ZjU3ZixMZjZRTWV3eA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62619282797%2Fstartup-series-part-4-deadlines&m=1eadlines&amp;m=1">
+<p>
+<p>
+<p>
+<strong>
+<p>
+<p>
+<p>
+<p>
+<p>
+<strong>
+<p>
+<p>
+<p>
+<p>
+<p>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D6514572&t=YTc0MjNhZGNhODdmZWU5MTllM2M4ZjIxMGZkN2VkZjdiMTNjYjk2MixMZjZRTWV3eA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62619282797%2Fstartup-series-part-4-deadlines&m=1eadlines&amp;m=1">
+<div class="clear">
+<li class="post" id="post62342949294">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/62342949294/startup-series-part-3-you-make-what-you-measure">
+<a title="Link to everything posted this day"
+          href="/day/2013/09/26"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/62342949294/startup-series-part-3-you-make-what-you-measure#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<blockquote>
+<p class="p1">
+<p class="p1">
+<em>
+<p class="p1">
+<p class="p1">
+<strong>
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.paulgraham.com%2Fgrowth.html&t=OGM5YjM2ZTE1YWNlYTRkZTEwNDczNzM1NzgzMTlhNmFjYmFlMmRjNSw5ZHM1S2g4Wg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62342949294%2Fstartup-series-part-3-you-make-what-you-measure&m=1-measure&amp;m=1">
+<span class="s1">
+<p class="p1">
+<strong>
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<strong>
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.amazon.com%2FThe-Lean-Startup-Entrepreneurs-Continuous%2Fdp%2F0307887898&t=MmJhZDBiOTE0ZTBiYTU3YzlhOTRiNzliNWI3NjdkNTVhZDM2YmQzZCw5ZHM1S2g4Wg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62342949294%2Fstartup-series-part-3-you-make-what-you-measure&m=1-measure&amp;m=1">
+<em>
+<em>
+<p class="p1">
+<strong>
+<p class="p1">
+<p class="p1">
+<strong>
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<strong>
+<ul class="ul1">
+<li class="li1">
+<li class="li1">
+<li class="li1">
+<li class="li1">
+<p>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D6456353&t=MWQzNTQ4ZDMyOWM2YzE5NTAzNzA2Zjg0MGFlMzEzOTAxMjBiYzE2Yyw5ZHM1S2g4Wg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F62342949294%2Fstartup-series-part-3-you-make-what-you-measure&m=1-measure&amp;m=1">
+<div class="clear">
+<li class="post" id="post61958629156">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/61958629156/startup-series-part-2-attracting-great-engineers">
+<a title="Link to everything posted this day"
+          href="/day/2013/09/22"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/61958629156/startup-series-part-2-attracting-great-engineers#disqus_thread" class="meta comments_link">
+<p class="meta">
+<span class="notecount">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<ul class="ul1">
+<li class="li1">
+<li class="li1">
+<li class="li1">
+<li class="li1">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fthenextweb.com%2Fshareables%2F2013%2F09%2F07%2Fgithubs-new-office-includes-a-replica-of-the-oval-office%2F&t=YmFjYzMxNjNjNmIyZDE4OGVmOTIxZTQ4MTE0Mzc4YzIxNTY2YTQxNixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<span>
+<span class="s2">
+<span>
+<p class="p1">
+<strong>
+<span class="s2">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<p class="p1">
+<img alt="image" src="http://78.media.tumblr.com/ddebec46b60f554989f09682fc3d8e71/tumblr_inline_mtj697fPI11r5tr1m.jpg">
+<p class="p2">
+<span>
+<p class="p2">
+<span>
+<p class="p1">
+<strong>
+<span class="s2">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgocardless.com%2Fblog%2Fhacking-on-side-projects-the-pool-ball-tracker%2F&t=NTdjOTFiYjBhN2QzNmY0NzMwMjc4ZTQ1NjcwMDRmZjM3MDgwNTI5YixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D4717196&t=ZGU4MmQ1YjU1ZWJjZDk1NTFjMmZmMzdjN2I1Y2YzMDMzMDlmOGFkNixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgocardless.com%2Fblog%2Fraspberry-pi-metric-dashboards%2F&t=MTU5YjE1MTU3YjA2M2FmNGVmNDY0YTVmNzRjMWUzNTRiYTAxYTFlYSxmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<span>
+<p class="p1">
+<p class="p1">
+<strong>
+<span class="s2">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgocardless.com%2Fblog%2Funresponsive-design%2F&t=NTFmN2FiOGQ4YjIzMjdmODlmYWI2YjMzNmYyZDM5YmEzNTE1M2JmMixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<span>
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgocardless.com%2Fblog%2Fbuilding-a-large-angular-application%2F&t=NjExOTljMzg0YmFhNTJlNTMxNTUwMTE3OTE1ZjcxYjU0MzU1NGNkZixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fzachholman.com%2Fposts%2Fhow-github-works-hours%2F&t=MzUyYjkxNTgwMjU3MzBlM2Y0OTJkMjVkMTBiMTRmYWY3MzdkOGRhZixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<p class="p1">
+<p class="p1">
+<strong>
+<span class="s2">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgithub.com%2Fblog%2F542-introducing-resque&t=ODdiMTQzNGFiN2Y2OGFhYWFiYTlkYTAyYWUyMDk0MmYxMDlmNzJkMSxmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgithub.com%2Fgocardless%2Fhutch&t=OTJmZmEyMmZkNjVkNDhiY2JkYzQ0ZGQ5ZDMxNTBmYjkxMjY5ZGVlMixmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgist.github.com%2Fpetehamilton%2F5494590&t=YTg0ZjY3YjM2ZTE2M2U2ODA3Y2Q3OGQ4OWZlZGEyZThkMjVkNTM2NCxmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fshopify.github.io%2Fdashing%2F&t=NDliYTljMGE3NzQxZjhkMzI4ZjA2YTY2ZWQ2MmRmNjJjYTM1YTIwZCxmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<p class="p1">
+<p class="p1">
+<strong>
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fangularjs.meetup.com%2F&t=MmYwMTg3ZGRlMGRiNjYwNTM2NmFiNGRiNDA5NDcxNTM2MGUyYmUyNyxmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<p class="p1">
+<p class="p1">
+<strong>
+<span class="s2">
+<p class="p1">
+<strong>
+<span class="s2">
+<p class="p1">
+<p class="p1">
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D6437589&t=ZGM3OWE1YmY3Mzc3YTFlZjA4MDk0MWMyNGJlYjA0Mjg0YTc1NjJiOSxmZW5QcGltZg%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61958629156%2Fstartup-series-part-2-attracting-great-engineers&m=1ngineers&amp;m=1">
+<span class="s2">
+<div class="clear">
+<li class="post" id="post61760552398">
+<div class="meta">
+<h2>
+<a title="Link to this post"
+          href="http://tomblomfield.com/post/61760552398/startup-series-part-1-interviewing-engineers">
+<a title="Link to everything posted this day"
+          href="/day/2013/09/20"
+          class="day">
+<span
+            class="month">
+<a href="http://tomblomfield.com/post/61760552398/startup-series-part-1-interviewing-engineers#disqus_thread" class="meta comments_link">
+<div class="content text-post">
+<h3>
+<span>
+<div class="text">
+<p>
+<span>
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Favc.com%2F&t=YjRhMmZjODhiMTJlNGFmNjQ4NjI4MDJhNjY1ZmI0NWZiZGQ2NGEyNixRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fblog.samaltman.com%2Fstartup-advice&t=NDhlMzQ1ZjM5Y2ViNWM5MjdhMTdkMWE5YjFhMDU4ODY0ODlhOTlmZixRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fpaulgraham.com%2Farticles.html&t=NjRlNzI4YzM4ZGQ0NGQxZTM4NTgwMzdlNzk0YTQ4NDUzMTA0ODM5OCxRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.amazon.com%2FFour-Steps-Epiphany-Steve-Blank%2Fdp%2F0989200507&t=YjQxMDRmMDg3NDY0MGYyODQwZTdlMzMzY2M0OGQ3NjkyNTA0OWM0MCxRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fwww.amazon.com%2FLean-Startup-Entrepreneurs-Continuous-Innovation%2Fdp%2F0307887898%2Fref%3Dsr_1_1%3Fs%3Dbooks%26ie%3DUTF8%26qid%3D1379688844%26sr%3D1-1%26keywords%3DLean%2BStartup&t=YzYwZTJiZjc3OTc2YmQ4ZjIzYWYyZjAzYzA2MTU4NDFlNTYyZGU4MyxRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<p>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fgocardless.com&t=MGVjYTk2YmY3YTliYTcxMDIzMzE3OTg4OTNiYmIxYzJiY2Y1ZjRiYixRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<p>
+<span>
+<span>
+<br>
+<span>
+<p>
+<strong>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<strong>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<span>
+<span>
+<p>
+<span>
+<span>
+<p>
+<strong>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<span>
+<br>
+<span>
+<p>
+<strong>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<strong>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<span>
+<p>
+<strong>
+<p>
+<span id="docs-internal-guid-11093689-3bd9-0bd7-d13f-44cf836a1c59">
+<span>
+<span>
+<p>
+<span>
+<span>
+<p>
+<span>
+<a href="http://t.umblr.com/redirect?z=https%3A%2F%2Fnews.ycombinator.com%2Fitem%3Fid%3D6430088&t=MmFiNGM0ZmFkMjdlNWZkYjhiNmFjMTA1MDQwY2VhMjVmMGQ5OGY5NSxRc3RPNkx2UA%3D%3D&b=t%3AXgZ3424Wrwxd8Lf0H8QVFw&p=http%3A%2F%2Ftomblomfield.com%2Fpost%2F61760552398%2Fstartup-series-part-1-interviewing-engineers&m=1ngineers&amp;m=1">
+<div class="clear">
+<div id="footer">
+<div id="pagination">
+<p class="back">
+<a href="/page/2">
+<p class="forward">
+<p class="page">
+<p id="colophon">
+<a href="http://www.tumblr.com/">
+<script type="text/javascript">
+<script src="http://requirejs.org/docs/release/1.0.3/minified/require.js">
+<script>
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target">
+<script type="text/javascript">
+<script type="text/javascript">
+<noscript>
+<script >
+<script type="text/javascript">
+<noscript>
+<noscript id="bootloader" data-bootstrap="{"Components":{"PostActivity":[],"NotificationPoller":{"messaging_keys":[],"token":"c86f8a500596474a7ef5034081f694bd","inbox_unread":0},"TumblelogIframe":{"unified":true,"variant":null,"isCompact":true,"tumblelogBundleSrc":"http:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=167b261b517eeac6aa72cc5a3d78f436","tumblelogName":"tomblomfield","isLoggedIn":false,"isFriend":false,"formKey":"","canSubscribe":false,"isSubscribed":false,"tumblelogTitle":"Tom Blomfield","tumblelogAvatar":"http:\/\/78.media.tumblr.com\/avatar_85f6b894c803_40.pnj","tumblelogHost":"http:\/\/tomblomfield.com","isOptica":false,"isCustomTheme":true,"themeHeaderImage":"https:\/\/assets.tumblr.com\/images\/default_header\/optica_pattern_07.png?_v=c52eb3e7fd4be5c98b8970b4c330d172","themeBackgroundColor":"#F6F6F6","themeTitleColor":"#444444","themeAccentColor":"#529ECC","brag":false,"adsEnabled":true,"canShowAd":false,"isPremium":false,"showLrecAds":false,"showStickyLrecBackfill":false,"showGeminiAds":false,"geminiSectionCodeDesktop":"a10bca9c-0c5d-4a02-ab13-14ab8513d81d","geminiSectionCodeMobile":"ced63809-b609-4aca-96a0-abc099acba6b","currentPageType":"blog","currentPage":"1","searchQuery":"","tag":"","query":"","chrono":false,"postId":"","src":"http:\/\/tomblomfield.com\/","postUrl":"","isBlocked":null,"isAdmin":false,"lookupButtonUrl":"","showSpamButton":false,"showRootPostButton":false,"rootPostUrl":"","showRadarPostButton":false,"radarKeys":"","isUniblocked":false,"isNsfw":false,"isAdult":false,"isSpam":false,"isPrimaryBlog":false,"canEdit":false,"canReblogSelf":false,"showLikeButton":false,"showReblogButton":false,"reblogUrl":"","showFanMailButton":false,"showMessagingButton":false,"loginCheckIframeSrc":"http:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=a7930a424784262b51489b3cbe0e96ab","appInstallUrls":{"android":"https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dblog_network_floating_cta","ios":"https:\/\/itunes.apple.com\/app\/apple-store\/id305343404?pt=9029\u0026ct=blog_network_floating_cta\u0026mt=8"},"appOpenReferrer":"tumblr_new_iframe","isShowSearch":true,"supplyLogging":[],"secondsSinceLastActivity":-1}},"Flags":{"doods":"eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwic2FmZV9tb2RlIjp0cnVlLCJzYWZlX21vZGVfZW5hYmxlZCI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwia3Jha2VuX3dlYl9sb2dnaW5nX2xpYnJhcnkiOnRydWUsInNlY3VyZV9mb3JtX2tleSI6dHJ1ZSwic2VjdXJlX2Zvcm1fa2V5X2Z1bGx5X29uIjp0cnVlLCJ0dW1ibGVsb2dfcG9wb3ZlciI6dHJ1ZSwiY2Fub25pY2FsX3VybF93cml0ZXMiOnRydWUsImVuYWJsZV9jYXB0dXJlX2pzIjp0cnVlLCJwcmltYV9wb3N0X2Zvcm1zIjp0cnVlLCJsb2NrZWRfcmVibG9nX3VpIjp0cnVlLCJ0YWJsZXRfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibW9iaWxlX2Jhbm5lcl9hY3RpdmUiOnRydWUsImxvZ19zZWFyY2hfYm94Ijp0cnVlLCJ1c2VyX21lbnRpb25zIjp0cnVlLCJodG1sNV9hdWRpb19wbGF5ZXIiOnRydWUsInBvcG92ZXJfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJpbmRhc2hfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJwb3B0aWNhX3R1bWJsZWxvZ19wb3BvdmVycyI6dHJ1ZSwidHVtYmxyX3R2Ijp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwicmVibG9nX3VpX3JlZnJlc2giOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJkYXNoYm9hcmRfcmVmcmVzaCI6dHJ1ZSwibW9iaWxlX3dlYl9waG90b3NldHMiOnRydWUsIm1vYmlsZV93ZWJfZ2F0ZSI6dHJ1ZSwibW9iaWxlX3dlYl9wYWdlX3RpdGxlcyI6dHJ1ZSwibW9iaWxlX3dlYl9hYnVzZV9mb3JtIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2Vycm9yc19sb2ciOnRydWUsImVuYWJsZV9qc19lcGhlbWVyYWxfbG9nIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwiY3Nsb2dnZXJfanMiOnRydWUsImRpc2NvdmVyeV9odWJfYWNjZXNzIjp0cnVlLCJoZWFkZXJfYWNjb3VudF9tZW51Ijp0cnVlLCJlbmFibGVfc2hhcmVfZW1iZWRfY29kZSI6dHJ1ZSwicmVkZGl0X3NoYXJpbmciOnRydWUsInBvc3RfaXRfZm9yd2FyZCI6dHJ1ZSwicGVlcHJfc2VhcmNoX2FuZF9maWx0ZXIiOnRydWUsImludGVybnNfcGFnZSI6dHJ1ZSwiZm9sbG93ZWRfc2VhcmNoZXNfYmlnX3dlYiI6dHJ1ZSwibGl2ZXBob3Rvc193ZWIiOnRydWUsInNhZmVfbW9kZV9vd25fcG9zdCI6dHJ1ZSwiaGlkZV9kZWZhdWx0X2hlYWRlcnNfYmxvZ19jYXJkcyI6dHJ1ZSwia3Jha2VuX3dlYl9iYmxvZ19hY3RpdmUiOnRydWUsImFyY2hpdmUtcGx1cyI6dHJ1ZSwiZGFybGFfYWRfZmVlZGJhY2siOnRydWUsInN0YXR1c19pbmRpY2F0b3JzX3VpIjp0cnVlLCJkaXNhYmxlX3lhaG9vX2JfY29va2llIjp0cnVlLCJsaXZlcGhvdG9zIjp0cnVlfQ=="},"Context":{"name":"default","time":1512948071000,"userinfo":{"primary":"","name":"","channels":[]},"hosts":{"assets_host":"http:\/\/assets.tumblr.com","secure_assets_host":"https:\/\/assets.tumblr.com","www_host":"http:\/\/www.tumblr.com","secure_www_host":"https:\/\/www.tumblr.com","embed_host":"https:\/\/embed.tumblr.com","safe_host":"http:\/\/safe.txmblr.com","platform_host":"http:\/\/platform.tumblr.com"},"language":"en_US","language_simple":"en","assets":"http:\/\/assets.tumblr.com\/client\/prod\/"},"Translations":{"%1$sReport %2$s's post?%3$sIf it violates our community guidelines, we'll remove it.%4$s":"%1$sReport %2$s's reblog?%3$sIf it violates our community guidelines, we'll remove it.%4$s","%1$sReport %2$s's reply?%3$sIf it violates our community guidelines, we'll remove it.%4$s":"%1$sReport %2$s's reblog?%3$sIf it violates our community guidelines, we'll remove it.%4$s"}}ZGFybGFfYWRfZmVlZGJhY2siOnRydWUsInN0YXR1c19pbmRpY2F0b3JzX3VpIjp0cnVlLCJkaXNhYmxlX3lhaG9vX2JfY29va2llIjp0cnVlLCJsaXZlcGhvdG9zIjp0cnVlfQ==&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1512948071000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;http:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;http:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;http:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;http:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;}}">
+<script src="http://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=167b261b517eeac6aa72cc5a3d78f436">
