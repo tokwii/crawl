@@ -11,4 +11,8 @@ vendor/
 CMakeLists.txt
 
 # Text file
+
 *.txt
+
+# Html
+*.html

@@ -1,7 +1,6 @@
 package queue
 
 type Task struct{
-	ID uint32
 	URL string
 	Status string
 }

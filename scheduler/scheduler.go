@@ -2,7 +2,6 @@ package scheduler
 
 import (
 	"github.com/tokwii/crawl/queue"
-	"encoding/xml"
 )
 
 // tasks being processed
@@ -17,7 +16,6 @@ type Scheduler struct{
 	Jobs map[string]queue.Task
 	Results map[string]string
 }
-
 
 func Schedule(){
 

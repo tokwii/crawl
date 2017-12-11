@@ -1,5 +1,6 @@
 package: github.com/tokwii/wcrawler
 import:
 - package: github.com/stretchr/testify
+- package: gopkg.in/h2non/gock.v1
 - package: github.com/asaskevich/govalidator
 - package: golang.org/x/net/html

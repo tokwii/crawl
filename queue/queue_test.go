@@ -16,7 +16,6 @@ func (suite *TaskQueueTestSuite) SetupSuite(){
 	suite.length = 1000
 	suite.taskQ = TaskQueue(suite.length)
 	suite.task = Task{
-		ID: 34,
 		URL: "https://google.com",
 		Status: "New",
 	}
@@ -27,7 +26,7 @@ func (suite *TaskQueueTestSuite) TestSingletonTaskQueue(){
 	taskQ2.Push(suite.task)
 	suite.Equal(taskQ2, suite.taskQ)
 	t2 := suite.taskQ.Fetch()
-	suite.Equal(suite.task.ID, t2.ID)
+	suite.Equal(suite.task.URL, t2.URL)
 }
 
 func (suite *TaskQueueTestSuite) TestPushItem(){
