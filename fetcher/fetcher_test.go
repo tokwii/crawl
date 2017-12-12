@@ -52,7 +52,8 @@ func (suite *FetcherTestSuite) SetupSuite(){
 }
 
 func (suite *FetcherTestSuite) TestSuiteTearDown(){
-
+	suite.taskQueue.Flush()
+	suite.taskQueue.Close()
 }
 
 func (suite *FetcherTestSuite) TestGetBaseURL(){

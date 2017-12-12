@@ -8,13 +8,13 @@ import (
 type TaskQueueTestSuite struct {
 	suite.Suite
 	taskQ *TaskQueue
-	length int
+	capacity int
 	task Task
 }
 
 func (suite *TaskQueueTestSuite) SetupSuite(){
-	suite.length = 1000
-	suite.taskQ = InitTaskQueue(suite.length)
+	suite.capacity = 1000
+	suite.taskQ = InitTaskQueue(suite.capacity)
 	suite.task = Task{
 		URL: "https://google.com",
 	}

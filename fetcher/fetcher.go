@@ -157,6 +157,7 @@ func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.TaskQueue) (Result,
 						URL: url,
 					}
 					taskQueue.Push(task)
+					//taskQueue.Flush()
 					// Need to Check wheather it has already be crawled. Will be Checked by Scheduler
 					// Recrawl
 				}
