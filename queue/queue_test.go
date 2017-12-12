@@ -7,22 +7,21 @@ import (
 
 type TaskQueueTestSuite struct {
 	suite.Suite
-	taskQ *taskQueue
+	taskQ *TaskQueue
 	length int
 	task Task
 }
 
 func (suite *TaskQueueTestSuite) SetupSuite(){
 	suite.length = 1000
-	suite.taskQ = TaskQueue(suite.length)
+	suite.taskQ = InitTaskQueue(suite.length)
 	suite.task = Task{
 		URL: "https://google.com",
-		Status: "New",
 	}
 }
 
 func (suite *TaskQueueTestSuite) TestSingletonTaskQueue(){
-	taskQ2 := TaskQueue(10)
+	taskQ2 := InitTaskQueue(10)
 	taskQ2.Push(suite.task)
 	suite.Equal(taskQ2, suite.taskQ)
 	t2 := suite.taskQ.Fetch()

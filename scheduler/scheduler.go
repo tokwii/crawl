@@ -1,8 +1,9 @@
 package scheduler
 
-import (
+/*import (
 	"github.com/tokwii/crawl/queue"
-)
+	"github.com/tokwii/crawl/fetcher"
+)*/
 
 // tasks being processed
 //  Views of Tasks being processe map[string]Task
@@ -12,14 +13,17 @@ import (
 // Plugin Different Outputs
 //
 
-type Scheduler struct{
-	Jobs map[string]queue.Task
-	Results map[string]string
-}
+/*type Scheduler struct{
+	Results map[string]map[string]string
+}*/
 
-func Schedule(){
+// Global Variable
+/*var taskQueue = queue.TaskQueue(10000)
 
-}
+func Schedule(numbThreads int, q *queue.TaskQueue){
+
+}*/
+
 
 
 

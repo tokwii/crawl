@@ -2,6 +2,7 @@ package fetcher
 
 import (
 	"github.com/stretchr/testify/suite"
+	"github.com/tokwii/crawl/queue"
 	"gopkg.in/h2non/gock.v1"
 	"testing"
 	"fmt"
@@ -11,10 +12,12 @@ type FetcherTestSuite struct {
 	suite.Suite
 	fetcher Fetcher
 	htmlBody string
+	taskQueue *queue.TaskQueue
 }
 
 
 func (suite *FetcherTestSuite) SetupSuite(){
+	suite.taskQueue = queue.InitTaskQueue(10)
 	suite.fetcher = Fetcher{}
 	suite.fetcher.BaseUrl, _ = suite.fetcher.getBaseUrl("http://johndoe.com/article")
 	suite.fetcher.EnableExternalLinks = false
@@ -90,7 +93,7 @@ func (suite *FetcherTestSuite) TestCrawlerDisableExternalDomains(){
 		Reply(200).
 		BodyString(suite.htmlBody)
 
-	result, _ := FetchURL("http://johndoe.none", false)
+	result, _ := FetchURL("http://johndoe.none", false, suite.taskQueue)
 
 	links := []string {"http://johndoe.none/books", "http://johndoe.none/books/favourite", "http://johndoe.none/sports"}
 	scripts := []string {"http://johndoe.none/assets/js/awesome.js", "http://akamai.net/johndeo/assets/js/unify.js"}
@@ -109,6 +112,8 @@ func (suite *FetcherTestSuite) TestCrawlerDisableExternalDomains(){
 	for _, style := range styles {
 		suite.Contains(result.Styles, style)
 	}
+	suite.Equal(len(links), suite.taskQueue.Len())
+	suite.taskQueue.Flush()
 }
 
 
@@ -120,13 +125,14 @@ func (suite *FetcherTestSuite) TestCrawlerEnableExternalDomains(){
 		Reply(200).
 		BodyString(suite.htmlBody)
 
-	result, _ := FetchURL("http://johndoe.none", true)
+	result, _ := FetchURL("http://johndoe.none", true, suite.taskQueue)
 
 	links := []string {"http://randomavatar.none/travel", "http://janedoe.none/blog"}
 
 	for _, link := range links {
 		suite.Contains(result.Links, link)
 	}
+	suite.taskQueue.Flush()
 }
 
 func TestFecter(t *testing.T){

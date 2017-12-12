@@ -9,6 +9,7 @@ import (
 	"strings"
 	"io"
 	"golang.org/x/net/html"
+	"github.com/tokwii/crawl/queue"
 )
 
 type Fetcher struct {
@@ -26,7 +27,7 @@ type Result struct{
 }
 // Crawl External Links shoud be a flag be disable
 
-func FetchURL(url string, fetchExternalDomain bool) (Result, error) {
+func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.TaskQueue) (Result, error) {
 	// This should be a public method...Args -> url, maps[string][string]string
 	valid := govalidator.IsURL(url)
 
@@ -35,7 +36,6 @@ func FetchURL(url string, fetchExternalDomain bool) (Result, error) {
 	}
 
 	response, err := http.Get(url)
-	//fmt.Println(response.Body.Read())
 
 	if err != nil {
 		return Result{}, fmt.Errorf("%v is Invalid", url)
@@ -45,7 +45,7 @@ func FetchURL(url string, fetchExternalDomain bool) (Result, error) {
 	// Close http Connection after return
 	defer bodyByteStream.Close()
 
-	f := Fetcher{}
+	f := &Fetcher{}
 	baseUrl, ok := f.getBaseUrl(url)
 
 	if !ok {
@@ -56,7 +56,7 @@ func FetchURL(url string, fetchExternalDomain bool) (Result, error) {
 	f.BaseUrl = baseUrl
 	f.EnableExternalLinks = fetchExternalDomain
 
-	result, err := f.crawl(bodyByteStream)
+	result, err := f.crawl(bodyByteStream, taskQueue)
 
 	if err != nil {
 		return Result{}, errors.New("Error Retrieving Crawling")
@@ -126,7 +126,7 @@ func (f *Fetcher) getTag(attributes []html.Attribute, tagKey string) (string, bo
 	return "", false
 }
 
-func (f *Fetcher) crawl(htmlBody io.Reader) (Result, error){
+func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.TaskQueue) (Result, error){
 
 	var styles, urls, imgs, js []string
 
@@ -153,6 +153,10 @@ func (f *Fetcher) crawl(htmlBody io.Reader) (Result, error){
 
 				if ok {
 					urls = append(urls, url)
+					task := queue.Task{
+						URL: url,
+					}
+					taskQueue.Push(task)
 					// Need to Check wheather it has already be crawled. Will be Checked by Scheduler
 					// Recrawl
 				}

@@ -4,36 +4,43 @@ import (
 	"sync"
 )
 
-type taskQueue struct {
+type TaskQueue struct {
 	queue chan Task
 }
 
-var queue *taskQueue
+// Singleton Object
+var queue *TaskQueue
 var once sync.Once
 
 // Initialize Singleton Task Queue. Thread Safe. HA for Scheduler
-func TaskQueue(length int) *taskQueue{
+func InitTaskQueue(length int) *TaskQueue{
 	once.Do(func(){
-		queue = &taskQueue{
+		queue = &TaskQueue{
 			queue: make(chan Task, length),
 		}
 	})
 	return queue
 }
 
-func (q *taskQueue) Push(task Task){
+func (q *TaskQueue) Push(task Task){
 	q.queue <- task
 }
 
-func (q *taskQueue) Fetch() Task{
+func (q *TaskQueue) Fetch() Task{
 	task := <- q.queue
 	return task
 }
 
-func (q *taskQueue) Len() int{
+func (q *TaskQueue) Len() int{
 	return len(q.queue)
 }
 
-func (q *taskQueue) Close(){
+func (q *TaskQueue) Flush(){
+	for i := 0; i < q.Len(); i++ {
+		<-q.queue
+	}
+}
+
+func (q *TaskQueue) Close(){
 	close(q.queue)
 }
