@@ -1,8 +1,10 @@
-hash: 2fbfdc88106e160349ac2eb53fdf616da0317446ac42b339f4845905c71f1057
-updated: 2017-12-11T13:19:15.630696051Z
+hash: 67cdda8cdffbd7fb184214cc83a42cc25960b252be2e38a6348353276c536e86
+updated: 2017-12-13T10:54:50.163254743Z
 imports:
 - name: github.com/asaskevich/govalidator
   version: 7b3beb6df3c42abd3509abfc3bcacc0fbfb7c877
+- name: github.com/BurntSushi/toml
+  version: 99064174e013895bbd9b025c31100bd1d9b590ca
 - name: github.com/stretchr/testify
   version: f390dcf405f7b83c997eac1b06768bb9f44dec18
   subpackages:

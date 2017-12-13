@@ -1,0 +1,23 @@
+[scheduler]
+    workerpool = 10
+    crawlextdomains = false
+    seedurls = [
+    "http://tomblomfield.com",
+    "http://cnn.com"
+    ]
+[queue]
+   mode = "local"
+   [queue.local]
+    # Enable Omit Empty
+        capacity = 100000
+        serverport = ""
+   [queue.remote]
+        capacity = -1
+        serverport = ""
+[storage]
+   mode = "local"
+   [storage.local]
+   # map
+        serverport = ""
+   [storage.redis]
+	    serverport = ""

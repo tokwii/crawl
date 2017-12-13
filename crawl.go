@@ -4,7 +4,10 @@ import (
 	//"fmt"
 	//"github.com/tokwii/crawl/fetcher"
 	//"github.com/tokwii/crawl/queue"
-	"github.com/tokwii/crawl/scheduler"
+	//"github.com/tokwii/crawl/scheduler"
+	"github.com/tokwii/crawl/config"
+	//"time"
+	"fmt"
 )
 
 func main()  {
@@ -24,9 +27,25 @@ func main()  {
 	}
 
 	fmt.Println(result.Links)*/
+
+
 	//numWorkers int, taskQCapacity int, seedUrl string
-	s := scheduler.InitSchedule(1, 1000000, "http://tomblomfield.com")
+	/*startTime := time.Now()
+	s := scheduler.InitSchedule(10, 1000000, "http://cnn.com")
 	s.Schedule()
 	//fmt.Println(s.GetAggregateResults())
+	endTime := time.Now()
+	diff := endTime.Sub(startTime)
+	fmt.Println("total time taken ", diff.Seconds(), "seconds")*/
+
+	// Config ..... Config ....
+	var c config.Config
+	err := c.Load("config/settings.toml")
+	if err != nil {
+		fmt.Println(err)
+	}
+	//fmt.Println(c.Queue.Mode)
+	fmt.Println(c.Queue.Mode)
+	fmt.Println(c.Queue.Remote)
 
 }

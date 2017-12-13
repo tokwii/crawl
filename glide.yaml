@@ -4,3 +4,4 @@ import:
 - package: gopkg.in/h2non/gock.v1
 - package: github.com/asaskevich/govalidator
 - package: golang.org/x/net/html
+- package: github.com/BurntSushi/toml

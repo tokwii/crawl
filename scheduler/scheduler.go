@@ -52,7 +52,6 @@ func (s *Scheduler) initCrawlWorkerPool(){
 		go s.crawlWorker(&wg)
 	}
 	wg.Wait()
-	s.taskQueue.Close()
 }
 
 func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
