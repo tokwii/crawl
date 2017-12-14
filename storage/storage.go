@@ -52,7 +52,7 @@ func build() *CrawlerStorage{
 	var c config.Config
 	err := c.Load("config/settings.toml")
 	if err != nil {
-  		fmt.Printf("error: %v\n", err)
+  		fmt.Errorf("error: %v\n", err)
 		os.Exit(-1)
 	}
 

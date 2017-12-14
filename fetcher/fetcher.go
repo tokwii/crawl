@@ -200,8 +200,13 @@ func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.TaskQueue) (Result,
 		Images: imgs,
 		Links: urls,
 	}
-	return result, nil
-}
-func CreateSiteMap(){
+	fmt.Println("Prarent Url")
+	//fmt.Println("http://tomblomfield.com/post/81111938563")
+	for _, u := range urls {
+		if u == "http://tomblomfield.com/post/81111938563" {
+			fmt.Println("parent Url " + f.Url)
+		}
 
+	}
+	return result, nil
 }

@@ -14,6 +14,7 @@ type LocalStorage struct {
 
 var localStore *LocalStorage
 var lsOnce sync.Once
+var mutex = &sync.Mutex{}
 
 func InitLocalStorage() *LocalStorage{
 	lsOnce.Do(func(){
@@ -25,12 +26,16 @@ func InitLocalStorage() *LocalStorage{
 }
 
 func (s *LocalStorage) Contains(key string) (bool) {
+	mutex.Lock()
 	_, ok := s.store[key]
+	mutex.Unlock()
 	return ok
 }
 
 func (s *LocalStorage) Add (key string, value map[string][]string){
+	mutex.Lock()
 	s.store[key] = value
+	mutex.Unlock()
 }
 
 func (s *LocalStorage) CreateSiteMap () (common.Sitemap){

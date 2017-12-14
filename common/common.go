@@ -34,6 +34,6 @@ func FetcherResultMap(fetcherResult fetcher.Result) (map[string][]string){
 	siteMetadata["links"] = fetcherResult.Links
 	siteMetadata["images"] = fetcherResult.Images
 	siteMetadata["styles"] = fetcherResult.Styles
-	siteMetadata["scripts"] = fetcherResult.Images
+	siteMetadata["scripts"] = fetcherResult.Scripts
 	return siteMetadata
 }
