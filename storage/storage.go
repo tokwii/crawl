@@ -1,55 +1,77 @@
 package storage
 
-/*import (
+import (
 	"github.com/tokwii/crawl/config"
+	"github.com/tokwii/crawl/common"
 	"sync"
+	"fmt"
+	"os"
 )
 
-//
-// Serialize
-// Contains()
-// SerialSiteMap() <- Priority!
-// Maps Thread Safe?
-// Use Thread Safe Ops
-//
 const LOCAL_STORAGE = "local"
 
 const REMOTE_STORAGE = "remote"
 
 type Storage interface {
-	Contains() bool
+	Contains(string) bool
 	Add(string, map[string][]string)
-	CreateSiteMap()
+	CreateSiteMap() common.Sitemap
 }
 
-type CrawlerStore struct {
+type CrawlerStorage struct {
 	Mode string
 	store Storage
 }
 
 // SingletonStore
-var store *CrawlerStore
+var crawlerStore *CrawlerStorage
 var once sync.Once
 
-func New() *CrawlerStore{
+func InitCrawlerStorage() *CrawlerStorage{
 	once.Do(func(){
-		queue = &TaskQueue{
-			queue: make(chan Task, capacity),
-		}
+		crawlerStore = build()
 	})
-	return queue
+	return crawlerStore
 }
 
-func build(){
+func (s *CrawlerStorage) Contains(key string) (bool) {
+	ok := s.store.Contains(key)
+	return ok
+}
 
-	storageMode := config.Config.Storage.Mode
-	switch storageMode{
-	case LOCAL_STORAGE:
+func (s *CrawlerStorage) Add (key string, value map[string][]string){
+	s.store.Add(key, value)
+}
 
-	case REMOTE_STORAGE:
+func (s *CrawlerStorage) CreateSiteMap () (common.Sitemap){
+	return s.store.CreateSiteMap()
+}
 
-	default:
+func build() *CrawlerStorage{
 
+	var c config.Config
+	err := c.Load("config/settings.toml")
+	if err != nil {
+  		fmt.Printf("error: %v\n", err)
+		os.Exit(-1)
 	}
+
+	cs := CrawlerStorage{}
+
+	storageMode := c.Storage.Mode
+
+	switch storageMode {
+	case LOCAL_STORAGE:
+		ls := InitLocalStorage()
+		cs.Mode = storageMode
+		cs.store = ls
+	case REMOTE_STORAGE:
+		//Remote
+	default:
+		// Defaults to Local Storage
+		ls := InitLocalStorage()
+		cs.Mode = storageMode
+		cs.store = ls
+	}
+	return  &cs
 }
-*/

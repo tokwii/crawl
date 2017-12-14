@@ -19,9 +19,9 @@ type Style struct{
 
 type URL struct {
 	Loc string `xml:"loc"`
-	Styles []Style `xml:"style"`
-	Scripts []Script `xml:"script"`
-	Image []Image `xml:"image"`
+	Styles []Style `xml:"style:style"`
+	Scripts []Script `xml:"script:script"`
+	Image []Image `xml:"image:image"`
 }
 
 type Sitemap struct {

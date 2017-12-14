@@ -5,9 +5,12 @@ import (
 	//"github.com/tokwii/crawl/fetcher"
 	//"github.com/tokwii/crawl/queue"
 	//"github.com/tokwii/crawl/scheduler"
-	"github.com/tokwii/crawl/config"
-	//"time"
+	//"github.com/tokwii/crawl/config"
+	"time"
 	"fmt"
+	"github.com/tokwii/crawl/scheduler"
+	"encoding/xml"
+	"os"
 )
 
 func main()  {
@@ -30,22 +33,29 @@ func main()  {
 
 
 	//numWorkers int, taskQCapacity int, seedUrl string
-	/*startTime := time.Now()
-	s := scheduler.InitSchedule(10, 1000000, "http://cnn.com")
+	startTime := time.Now()
+	s := scheduler.InitSchedule(10, 1000000, "http://tomblomfield.com")
 	s.Schedule()
-	//fmt.Println(s.GetAggregateResults())
 	endTime := time.Now()
 	diff := endTime.Sub(startTime)
-	fmt.Println("total time taken ", diff.Seconds(), "seconds")*/
+	fmt.Println("total time taken ", diff.Seconds(), "seconds")
+
+	xmlBytes, err := xml.MarshalIndent(s.AggrResult.CreateSiteMap() ,"  ", "    ")
+
+	if err != nil {
+		fmt.Printf("error: %v\n", err)
+	}
+	xmlstring := []byte(xml.Header + string(xmlBytes))
+	os.Stdout.Write(xmlstring)
 
 	// Config ..... Config ....
-	var c config.Config
+	/*var c config.Config
 	err := c.Load("config/settings.toml")
 	if err != nil {
 		fmt.Println(err)
 	}
-	//fmt.Println(c.Queue.Mode)
 	fmt.Println(c.Queue.Mode)
-	fmt.Println(c.Queue.Remote)
+	fmt.Println(c.Storage.Mode)
+	fmt.Println(c.Storage.Local)*/
 
 }

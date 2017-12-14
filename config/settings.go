@@ -51,3 +51,11 @@ func(c *Config) Load(path string) (error){
    }
    return nil
 }
+
+/*var Conf Config
+func init(){
+   Conf.Queue.Mode = "local"
+   Conf.Queue.Local.Capacity = 1000
+   Conf.Storage.Mode = "local"
+   Conf.Storage.Mode = "local"
+}*/

@@ -5,13 +5,14 @@ import (
 	"github.com/tokwii/crawl/queue"
 	"github.com/tokwii/crawl/fetcher"
 	"github.com/tokwii/crawl/common"
+	"github.com/tokwii/crawl/storage"
 	"fmt"
 )
 
 // Make this private
 type Scheduler struct{
 	// TODO Concurrency Issue? User Mutex?
-	AggrResult map[string]map[string][]string
+	AggrResult *storage.CrawlerStorage
 	taskQueue *queue.TaskQueue
 	numWorkers int
 }
@@ -31,17 +32,15 @@ func InitSchedule(numWorkers int, taskQCapacity int, seedUrl string)(*Scheduler)
 	fmt.Println("Numbere of workers ...")
 	fmt.Println(numWorkers)
 	s.taskQueue = queue.InitTaskQueue(taskQCapacity)
-	s.AggrResult = make(map[string]map[string][]string)
+	s.AggrResult = storage.InitCrawlerStorage()
 	s.taskQueue.Push(queue.Task{URL:seedUrl})
 	s.numWorkers = numWorkers
 	return &s
 }
+
 func (s *Scheduler) Schedule(){
 	s.initCrawlWorkerPool()
 	s.taskQueue.Close()
-}
-func (s *Scheduler) GetAggregateResults() map[string]map[string][]string {
-	return s.AggrResult
 }
 
 func (s *Scheduler) initCrawlWorkerPool(){
@@ -55,13 +54,12 @@ func (s *Scheduler) initCrawlWorkerPool(){
 }
 
 func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
+
 	for i := 0; i < s.taskQueue.Len(); i++ {
 		task := s.taskQueue.Fetch()
-		// Check whether it has already been crawled
-		_, ok := s.AggrResult[task.URL]
+		ok := s.AggrResult.Contains(task.URL)
 		if !ok {
 			fmt.Println("Currently Crawled Url")
-			//fmt.Println("Currently Crawled Url")
 			fmt.Println(task.URL)
 			result, err := fetcher.FetchURL(task.URL, false, s.taskQueue)
 			if err != nil {
@@ -69,9 +67,8 @@ func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
 			}
 
 			siteMetadata := common.FetcherResultMap(result)
-			//fmt.Println(result)
-			s.AggrResult[task.URL] = siteMetadata
+			s.AggrResult.Add(task.URL, siteMetadata)
 		}
 	}
-	wg.Done()
+	defer wg.Done()
 }

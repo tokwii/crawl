@@ -13,10 +13,10 @@ type LocalStorage struct {
 // Singleton Local Store
 
 var localStore *LocalStorage
-var once sync.Once
+var lsOnce sync.Once
 
 func InitLocalStorage() *LocalStorage{
-	once.Do(func(){
+	lsOnce.Do(func(){
 		localStore = &LocalStorage{
 			store: make(map[string]map[string][]string),
 		}
@@ -24,7 +24,7 @@ func InitLocalStorage() *LocalStorage{
 	return localStore
 }
 
-func (s *LocalStorage) Contains(key string)(bool){
+func (s *LocalStorage) Contains(key string) (bool) {
 	_, ok := s.store[key]
 	return ok
 }
