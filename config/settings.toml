@@ -3,7 +3,7 @@
     crawlextdomains = false
     seedurls = [
     "http://tomblomfield.com",
-    "http://cnn.com"
+    "http://bbc.com"
     ]
 [queue]
    mode = "local"
