@@ -22,7 +22,7 @@ $ glide install
 ```shell
 # Compile the App
 $ cd $GOPATH/src/github.com/tokwii/crawl
-$ make build
+$ make install
 ```
 
 ```shell
