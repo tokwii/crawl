@@ -14,12 +14,14 @@ $GOPATH/
 
 ```shell
 # Install dependencies
-glide install
+$ cd $GOPATH/src/github.com/tokwii/crawl
+$ glide install
 ```
 
 ```shell
 # Compile the App
-make build
+$ cd $GOPATH/src/github.com/tokwii/crawl
+$ make build
 ```
 
 ```shell
@@ -32,4 +34,11 @@ $ vi config/settings.toml
 # Run App
 $ cd $GOPATH/src/github.com/tokwii/crawl
 $ ./crawl 
+```
+#### Test
+
+```shell
+# Run Tests
+$ cd $GOPATH/src/github.com/tokwii/crawl
+$ make test
 ```
