@@ -19,10 +19,7 @@ func InitSchedule(numWorkers int, seedUrls []string)(*Scheduler){
 	s.CQueue = queue.InitCrawlerQueue()
 	s.CStorage = storage.InitCrawlerStorage()
 	s.numWorkers = numWorkers
-
-	for _, url := range seedUrls{
-		s.CQueue.Push(url)
-	}
+	s.initQtasks(seedUrls)
 
 	return &s
 }
@@ -37,12 +34,12 @@ func (s *Scheduler) initCrawlWorkerPool(){
 
 	for i := 0; i < s.numWorkers; i++ {
 		wg.Add(1)
-		go s.crawlWorker(&wg)
+		go s.crawlWorker(i, &wg)
 	}
 	defer wg.Wait()
 }
 
-func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
+func (s *Scheduler) crawlWorker(workerId int , wg *sync.WaitGroup){
 
 	for i := 0; i < s.CQueue.Len(); i++ {
 
@@ -51,6 +48,7 @@ func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
 
 		if !ok {
 			// TODO Logging instead of STDOUT
+			fmt.Printf("[Info] Worker %d Picking up Task\n", workerId)
 			fmt.Println("[Info] Crawling : " + task)
 
 			result, err := fetcher.FetchURL(task, false, s.CQueue, s.CStorage)
@@ -73,4 +71,17 @@ func (s *Scheduler) fetcherResultToMap(fetcherResult fetcher.Result) (map[string
 	siteMetadata["styles"] = fetcherResult.Styles
 	siteMetadata["scripts"] = fetcherResult.Scripts
 	return siteMetadata
+}
+
+func (s *Scheduler) initQtasks(seedUrls []string){
+	// Put tasks whose number is atleast Equal to number of Workers
+	// Else if tasks less than the number of worker, excess workers wont be used
+	numTasksInit := 0
+	for numTasksInit < s.numWorkers{
+		for _, url := range seedUrls{
+			s.CQueue.Push(url)
+			numTasksInit += 1
+		}
+
+	}
 }

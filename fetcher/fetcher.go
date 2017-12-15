@@ -25,7 +25,8 @@ type Result struct{
 	Images []string
 }
 
-func FetchURL(rawUrl string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueue, crawlerStore *storage.CrawlerStorage) (Result, error) {
+func FetchURL(rawUrl string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueue,
+		crawlerStore *storage.CrawlerStorage) (Result, error) {
 
 	valid := govalidator.IsURL(rawUrl)
 

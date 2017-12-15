@@ -4,6 +4,7 @@
 
 ```
 # Clone to this repo structure
+# golang >= go1.7.4
 
 $GOPATH/
 └── src
@@ -33,7 +34,8 @@ $ vi config/settings.toml
 ```shell
 # Run App
 $ cd $GOPATH/src/github.com/tokwii/crawl
-$ ./crawl 
+$ ./crawl
+$ vi sitemap.xml
 ```
 #### Test
 
@@ -42,3 +44,7 @@ $ ./crawl
 $ cd $GOPATH/src/github.com/tokwii/crawl
 $ make test
 ```
+#### Reference (Sitemap)
+[1] https://www.sitemaps.org/protocol.html
+
+[2] https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190

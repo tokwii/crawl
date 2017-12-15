@@ -1,7 +1,7 @@
 package queue
 
 import (
-"sync"
+	"sync"
 )
 
 type localQueue struct {
@@ -10,6 +10,7 @@ type localQueue struct {
 
 // Singleton Object
 var queue *localQueue
+// Incase more one upstream init go routines is created
 var lsOnce sync.Once
 
 func initLocalQueue(capacity int) *localQueue{

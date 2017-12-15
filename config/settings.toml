@@ -1,5 +1,7 @@
 [scheduler]
 # Number of crawler workers to be used
+# This has to be less than Queue Capacity in Local mode (Else Excess will block)
+# Increase Worker Pool for Better Speed (NOTE: Very high number will block the crawler)
     workerpool = 20
 # Set whether to crawl external domains
     crawlextdomains = false
@@ -8,15 +10,19 @@
     "http://tomblomfield.com"
     ]
 [queue]
+# Only Local Mode is Supported
+# For Remote Mode Implement Queue Interface
    mode = "local"
    [queue.local]
-    # Enable Omit Empty
-        capacity = 10000
+    # Set this to a Substantially large Value Else Crawler Workers will be blocked
+        capacity = 100000
         serverport = ""
    [queue.remote]
         capacity = -1
         serverport = ""
 [storage]
+# Only Local Mode is Supported
+# For Remote Mode Implement Storage Interface
    mode = "local"
    [storage.local]
    # map

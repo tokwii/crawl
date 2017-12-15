@@ -149,7 +149,7 @@ func (suite *FetcherTestSuite) TestCrawlerEnableExternalDomains(){
 func (suite *FetcherTestSuite) TestCrawlerDomainsRedirection(){
 
 	defer gock.Off()
-
+	// TODO redirection Aliases that point to same resource
 	gock.New("http://johndoe.none").
 		Get("/redirect").
 		Reply(302).

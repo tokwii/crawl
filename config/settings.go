@@ -54,8 +54,13 @@ func (c *Config) LoadConfig(path string) (error){
       return err
    }
 
+
    if c.Queue.Mode == LOCAL_QUEUE && c.Queue.Local.Capacity <= 0 {
       return fmt.Errorf("Local Queue Capacity Empty")
+   }
+
+   if c.Queue.Mode == LOCAL_QUEUE && c.Queue.Local.Capacity < c.Scheduler.WorkerPool {
+      return fmt.Errorf("Queue Capacity Must be greater than Workerpool")
    }
 
    if len(c.Scheduler.SeedUrls) == 0 {
