@@ -1,9 +1,11 @@
 [scheduler]
-    workerpool = 10
+# Number of crawler workers to be used
+    workerpool = 20
+# Set whether to crawl external domains
     crawlextdomains = false
+# Initial Seed Domains
     seedurls = [
-    "http://tomblomfield.com",
-    "http://bbc.com"
+    "http://tomblomfield.com"
     ]
 [queue]
    mode = "local"

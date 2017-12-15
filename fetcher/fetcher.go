@@ -2,7 +2,6 @@ package fetcher
 
 import (
 	"fmt"
-	"errors"
 	"github.com/asaskevich/govalidator"
 	"net/url"
 	"net/http"
@@ -10,6 +9,7 @@ import (
 	"io"
 	"golang.org/x/net/html"
 	"github.com/tokwii/crawl/queue"
+	"github.com/tokwii/crawl/storage"
 )
 
 type Fetcher struct {
@@ -23,21 +23,20 @@ type Result struct{
 	Styles []string
 	Scripts []string
 	Images []string
-	Links []string
 }
 
-func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueue) (Result, error) {
+func FetchURL(rawUrl string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueue, crawlerStore *storage.CrawlerStorage) (Result, error) {
 
-	valid := govalidator.IsURL(url)
+	valid := govalidator.IsURL(rawUrl)
 
 	if !valid {
-		return Result{}, fmt.Errorf("%v is Invalid", url)
+		return Result{}, fmt.Errorf("%v is Invalid", rawUrl)
 	}
 
-	response, err := http.Get(url)
+	response, err := http.Get(rawUrl)
 
 	if err != nil {
-		return Result{}, fmt.Errorf("%v is Invalid", url)
+		return Result{}, fmt.Errorf("%v is Invalid", rawUrl)
 	}
 
 	bodyByteStream := response.Body
@@ -46,13 +45,23 @@ func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueu
 	// Follow Redirects HTTP 301/302
 	requestUrl := response.Request.URL.String()
 
+	// Removes Poorly formatted url(s) -> Hash
+	parsedUrl, _ := url.Parse(requestUrl)
+	cleanReqUrl := fmt.Sprintf("%s://%s%s", parsedUrl.Scheme, parsedUrl.Host, parsedUrl.Path)
+
+	ok := crawlerStore.Contains(cleanReqUrl)
+
+	// Different Urls(Aliases) that redirect to the same url
+	if ok {
+		return Result{}, fmt.Errorf("Alias for %v already crawled", rawUrl)
+	}
+
 	f := Fetcher{}
 
-	// Set the URLS here!!
 	baseUrl, ok := f.getBaseUrl(requestUrl)
 
 	if !ok {
-		return Result{}, errors.New("Error Retrieving Base Url")
+		return Result{}, fmt.Errorf("Error Retrieving Base Url for %v ", rawUrl)
 	}
 
 	f.Url = requestUrl
@@ -62,14 +71,8 @@ func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueu
 	result, err := f.crawl(bodyByteStream, taskQueue)
 
 	if err != nil {
-		return Result{}, errors.New("Error Retrieving Crawling")
+		return Result{}, fmt.Errorf("Error Parsing page for %v ", rawUrl)
 	}
-
-	/*if url == "http://tomblomfield.com/post/81111938563"{
-		fmt.Println("Resultant Url ")
-		fmt.Println(requestUrl)
-		fmt.Println(result)
-	}*/
 
 	return result, nil
 }
@@ -135,7 +138,7 @@ func (f *Fetcher) getTag(attributes []html.Attribute, tagKey string) (string, bo
 
 func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.CrawlerQueue) (Result, error){
 
-	var styles, urls, imgs, js []string
+	var styles, imgs, js []string
 
 	htmlDoc := html.NewTokenizer(htmlBody)
 	// BFS
@@ -159,7 +162,6 @@ func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.CrawlerQueue) (Resu
 				url, ok := f.getHrefTag(token.Attr)
 
 				if ok {
-					urls = append(urls, url)
 					taskQueue.Push(url)
 				}
 
@@ -199,18 +201,6 @@ func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.CrawlerQueue) (Resu
 		Styles: styles,
 		Scripts: js,
 		Images: imgs,
-		Links: urls,
-	}
-	for _ ,url := range urls{
-		if url == "http://tomblomfield.com/post/81111938563"{
-			fmt.Println("Parent Url ")
-			fmt.Println(f.Url)
-			fmt.Println("Base Url...")
-			fmt.Println(f.BaseUrl)
-			//fmt.Println(requestUrl)
-			//fmt.Println(result)
-		}
-
 	}
 
 	return result, nil

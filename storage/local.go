@@ -57,6 +57,7 @@ func (s *LocalStorage) CreateSiteMap () (common.Sitemap){
 		 var styles []common.Style
 		 var imgs []common.Image
 
+
 		for aType, aValues  := range assets {
 			switch aType {
 			case "scripts":
@@ -84,7 +85,7 @@ func (s *LocalStorage) CreateSiteMap () (common.Sitemap){
 				continue
 			}
 		}
-		u.Image = imgs
+		u.Images = imgs
 		u.Scripts = js
 		u.Styles = styles
 		urls = append(urls, u)

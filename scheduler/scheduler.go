@@ -4,7 +4,6 @@ import (
 	"sync"
 	"github.com/tokwii/crawl/queue"
 	"github.com/tokwii/crawl/fetcher"
-	"github.com/tokwii/crawl/common"
 	"github.com/tokwii/crawl/storage"
 	"fmt"
 )
@@ -46,18 +45,32 @@ func (s *Scheduler) initCrawlWorkerPool(){
 func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
 
 	for i := 0; i < s.CQueue.Len(); i++ {
+
 		task := s.CQueue.Fetch()
 		ok := s.CStorage.Contains(task)
+
 		if !ok {
-			fmt.Println("Url being crawled ...  "+ task)
-			result, err := fetcher.FetchURL(task, false, s.CQueue)
+			// TODO Logging instead of STDOUT
+			fmt.Println("[Info] Crawling : " + task)
+
+			result, err := fetcher.FetchURL(task, false, s.CQueue, s.CStorage)
+
 			if err != nil {
+				fmt.Println("[Warning] :", err)
 				continue
 			}
 
-			siteMetadata := common.FetcherResultMap(result)
+			siteMetadata := s.fetcherResultToMap(result)
 			s.CStorage.Add(task, siteMetadata)
 		}
 	}
 	defer wg.Done()
+}
+
+func (s *Scheduler) fetcherResultToMap(fetcherResult fetcher.Result) (map[string][]string){
+	siteMetadata := make(map[string][]string)
+	siteMetadata["images"] = fetcherResult.Images
+	siteMetadata["styles"] = fetcherResult.Styles
+	siteMetadata["scripts"] = fetcherResult.Scripts
+	return siteMetadata
 }

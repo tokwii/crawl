@@ -1,7 +1,6 @@
 package common
 
 import (
-	"github.com/tokwii/crawl/fetcher"
 	"encoding/xml"
 )
 // Add Last modified field
@@ -21,19 +20,10 @@ type URL struct {
 	Loc string `xml:"loc"`
 	Styles []Style `xml:"style:style"`
 	Scripts []Script `xml:"script:script"`
-	Image []Image `xml:"image:image"`
+	Images []Image `xml:"image:image"`
 }
 
 type Sitemap struct {
 	XMLName xml.Name `xml:"urlset"`
 	URLS     []URL    `xml:"url"`
-}
-
-func FetcherResultMap(fetcherResult fetcher.Result) (map[string][]string){
-	siteMetadata := make(map[string][]string)
-	siteMetadata["links"] = fetcherResult.Links
-	siteMetadata["images"] = fetcherResult.Images
-	siteMetadata["styles"] = fetcherResult.Styles
-	siteMetadata["scripts"] = fetcherResult.Scripts
-	return siteMetadata
 }

@@ -43,6 +43,6 @@ func main()  {
 
 	xmlstring := []byte(xml.Header + string(xmlBytes))
 	//os.Stdout.Write(xmlstring)
-	ioutil.WriteFile("sitemap.xml", xmlstring, 0440)
+	ioutil.WriteFile("sitemap.xml", xmlstring, 0666)
 }
 
