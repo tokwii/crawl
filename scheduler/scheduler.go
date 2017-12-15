@@ -9,38 +9,28 @@ import (
 	"fmt"
 )
 
-// Make this private
 type Scheduler struct{
-	// TODO Concurrency Issue? User Mutex?
-	AggrResult *storage.CrawlerStorage
-	taskQueue *queue.TaskQueue
+	CStorage *storage.CrawlerStorage
+	CQueue *queue.CrawlerQueue
 	numWorkers int
 }
-// Output to a Channel or Sharded Dastructure!
 
-// Global Variable
-/*var taskQueue = queue.TaskQueue(10000)
-
-func Schedule(numbThreads int, q *queue.TaskQueue){
-
-}*/
-
-//1 ) Iterate through the Chanel starting of a go rountine <-
-
-func InitSchedule(numWorkers int, taskQCapacity int, seedUrl string)(*Scheduler){
+func InitSchedule(numWorkers int, seedUrls []string)(*Scheduler){
 	var s Scheduler
-	fmt.Println("Numbere of workers ...")
-	fmt.Println(numWorkers)
-	s.taskQueue = queue.InitTaskQueue(taskQCapacity)
-	s.AggrResult = storage.InitCrawlerStorage()
-	s.taskQueue.Push(queue.Task{URL:seedUrl})
+	s.CQueue = queue.InitCrawlerQueue()
+	s.CStorage = storage.InitCrawlerStorage()
 	s.numWorkers = numWorkers
+
+	for _, url := range seedUrls{
+		s.CQueue.Push(url)
+	}
+
 	return &s
 }
 
 func (s *Scheduler) Schedule(){
 	s.initCrawlWorkerPool()
-	s.taskQueue.Close()
+	s.CQueue.Close()
 }
 
 func (s *Scheduler) initCrawlWorkerPool(){
@@ -50,24 +40,23 @@ func (s *Scheduler) initCrawlWorkerPool(){
 		wg.Add(1)
 		go s.crawlWorker(&wg)
 	}
-	wg.Wait()
+	defer wg.Wait()
 }
 
 func (s *Scheduler) crawlWorker(wg *sync.WaitGroup){
 
-	for i := 0; i < s.taskQueue.Len(); i++ {
-		task := s.taskQueue.Fetch()
-		ok := s.AggrResult.Contains(task.URL)
+	for i := 0; i < s.CQueue.Len(); i++ {
+		task := s.CQueue.Fetch()
+		ok := s.CStorage.Contains(task)
 		if !ok {
-			fmt.Println("Currently Crawled Url")
-			fmt.Println(task.URL)
-			result, err := fetcher.FetchURL(task.URL, false, s.taskQueue)
+			fmt.Println("Url being crawled ...  "+ task)
+			result, err := fetcher.FetchURL(task, false, s.CQueue)
 			if err != nil {
 				continue
 			}
 
 			siteMetadata := common.FetcherResultMap(result)
-			s.AggrResult.Add(task.URL, siteMetadata)
+			s.CStorage.Add(task, siteMetadata)
 		}
 	}
 	defer wg.Done()

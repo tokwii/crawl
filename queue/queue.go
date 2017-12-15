@@ -1,46 +1,73 @@
 package queue
 
 import (
+	"github.com/tokwii/crawl/config"
 	"sync"
 )
 
-type TaskQueue struct {
-	queue chan Task
+const LOCAL_QUEUE = "local"
+
+const REMOTE_QUEUE = "remote"
+
+type Queue interface {
+	Push(string)
+	Fetch() string
+	Len() int
+	Close()
+	Flush()
 }
 
-// Singleton Object
-var queue *TaskQueue
+type CrawlerQueue struct {
+	Mode string
+	queue Queue
+}
+
+// SingletonStore
+var crawlerQueue *CrawlerQueue
 var once sync.Once
 
-// Initialize Singleton Task Queue. Thread Safe. HA for Scheduler
-func InitTaskQueue(capacity int) *TaskQueue{
+func InitCrawlerQueue() *CrawlerQueue{
 	once.Do(func(){
-		queue = &TaskQueue{
-			queue: make(chan Task, capacity),
-		}
+		crawlerQueue = build()
 	})
-	return queue
+	return crawlerQueue
 }
 
-func (q *TaskQueue) Push(task Task){
-	q.queue <- task
+func (q *CrawlerQueue) Push(task string){
+	q.queue.Push(task)
 }
 
-func (q *TaskQueue) Fetch() Task{
-	task := <- q.queue
-	return task
+func (q *CrawlerQueue) Fetch() (string) {
+	return q.queue.Fetch()
 }
 
-func (q *TaskQueue) Len() int{
-	return len(q.queue)
+func (q *CrawlerQueue) Len() (int) {
+	return q.queue.Len()
+}
+func (q *CrawlerQueue) Close() {
+	q.queue.Close()
 }
 
-func (q *TaskQueue) Flush(){
-	for i := 0; i < q.Len(); i++ {
-		<-q.queue
+func (q *CrawlerQueue) Flush() {
+	q.queue.Flush()
+}
+
+func build() *CrawlerQueue{
+	cq := CrawlerQueue{}
+
+	queueMode := config.Conf.Queue.Mode
+	switch queueMode {
+	case LOCAL_QUEUE:
+		ls := initLocalQueue(config.Conf.Queue.Local.Capacity)
+		cq.Mode = queueMode
+		cq.queue = ls
+	case REMOTE_QUEUE:
+		//Remote
+	default:
+		// Defaults to Local Storage (For Test Too)
+		ls := initLocalQueue(100000)
+		cq.Mode = queueMode
+		cq.queue = ls
 	}
-}
-
-func (q *TaskQueue) Close(){
-	close(q.queue)
+	return  &cq
 }

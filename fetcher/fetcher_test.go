@@ -12,12 +12,12 @@ type FetcherTestSuite struct {
 	suite.Suite
 	fetcher Fetcher
 	htmlBody string
-	taskQueue *queue.TaskQueue
+	taskQueue *queue.CrawlerQueue
 }
 
 
 func (suite *FetcherTestSuite) SetupSuite(){
-	suite.taskQueue = queue.InitTaskQueue(10)
+	suite.taskQueue = queue.InitCrawlerQueue()
 	suite.fetcher = Fetcher{}
 	suite.fetcher.BaseUrl, _ = suite.fetcher.getBaseUrl("http://johndoe.com/article")
 	suite.fetcher.EnableExternalLinks = false

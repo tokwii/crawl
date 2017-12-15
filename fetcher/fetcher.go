@@ -25,10 +25,9 @@ type Result struct{
 	Images []string
 	Links []string
 }
-// Crawl External Links shoud be a flag be disable
 
-func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.TaskQueue) (Result, error) {
-	// This should be a public method...Args -> url, maps[string][string]string
+func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.CrawlerQueue) (Result, error) {
+
 	valid := govalidator.IsURL(url)
 
 	if !valid {
@@ -42,17 +41,21 @@ func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.TaskQueue) 
 	}
 
 	bodyByteStream := response.Body
-	// Close http Connection after return
 	defer bodyByteStream.Close()
 
-	f := &Fetcher{}
-	baseUrl, ok := f.getBaseUrl(url)
+	// Follow Redirects HTTP 301/302
+	requestUrl := response.Request.URL.String()
+
+	f := Fetcher{}
+
+	// Set the URLS here!!
+	baseUrl, ok := f.getBaseUrl(requestUrl)
 
 	if !ok {
 		return Result{}, errors.New("Error Retrieving Base Url")
 	}
 
-	f.Url = url
+	f.Url = requestUrl
 	f.BaseUrl = baseUrl
 	f.EnableExternalLinks = fetchExternalDomain
 
@@ -62,14 +65,18 @@ func FetchURL(url string, fetchExternalDomain bool, taskQueue *queue.TaskQueue) 
 		return Result{}, errors.New("Error Retrieving Crawling")
 	}
 
+	/*if url == "http://tomblomfield.com/post/81111938563"{
+		fmt.Println("Resultant Url ")
+		fmt.Println(requestUrl)
+		fmt.Println(result)
+	}*/
+
 	return result, nil
 }
 
 func (f *Fetcher) buildAbsoluteUrl(uri string) (string){
 	return fmt.Sprintf("%s%s", f.BaseUrl, uri)
 }
-
-// External links you dont want top scrap
 
 func (f *Fetcher) getBaseUrl(rawUrl string) (string, bool){
 
@@ -126,7 +133,7 @@ func (f *Fetcher) getTag(attributes []html.Attribute, tagKey string) (string, bo
 	return "", false
 }
 
-func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.TaskQueue) (Result, error){
+func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.CrawlerQueue) (Result, error){
 
 	var styles, urls, imgs, js []string
 
@@ -153,13 +160,7 @@ func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.TaskQueue) (Result,
 
 				if ok {
 					urls = append(urls, url)
-					task := queue.Task{
-						URL: url,
-					}
-					taskQueue.Push(task)
-					//taskQueue.Flush()
-					// Need to Check wheather it has already be crawled. Will be Checked by Scheduler
-					// Recrawl
+					taskQueue.Push(url)
 				}
 
 			case token.Data == "script":
@@ -200,13 +201,17 @@ func (f *Fetcher) crawl(htmlBody io.Reader, taskQueue *queue.TaskQueue) (Result,
 		Images: imgs,
 		Links: urls,
 	}
-	fmt.Println("Prarent Url")
-	//fmt.Println("http://tomblomfield.com/post/81111938563")
-	for _, u := range urls {
-		if u == "http://tomblomfield.com/post/81111938563" {
-			fmt.Println("parent Url " + f.Url)
+	for _ ,url := range urls{
+		if url == "http://tomblomfield.com/post/81111938563"{
+			fmt.Println("Parent Url ")
+			fmt.Println(f.Url)
+			fmt.Println("Base Url...")
+			fmt.Println(f.BaseUrl)
+			//fmt.Println(requestUrl)
+			//fmt.Println(result)
 		}
 
 	}
+
 	return result, nil
 }

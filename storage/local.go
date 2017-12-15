@@ -6,12 +6,12 @@ import (
 )
 
 type LocalStorage struct {
-	// Sync Map??
 	store map[string]map[string][]string
 
 }
-// Singleton Local Store
 
+// Singleton Local Store
+// Mutex for Thread Safe Ops on Map
 var localStore *LocalStorage
 var lsOnce sync.Once
 var mutex = &sync.Mutex{}
@@ -38,9 +38,18 @@ func (s *LocalStorage) Add (key string, value map[string][]string){
 	mutex.Unlock()
 }
 
+func (s *LocalStorage) Get(key string) (map[string][]string, bool) {
+	value, ok := s.store[key]
+	if ok {
+		return value, true
+	}
+	return nil, false
+}
+
 func (s *LocalStorage) CreateSiteMap () (common.Sitemap){
 	var sitemap common.Sitemap
 	var urls []common.URL
+
 	for url, assets := range s.store {
 		 u := common.URL{}
 		 u.Loc = url

@@ -3,7 +3,9 @@ package config
 import (
    "github.com/BurntSushi/toml"
    "io/ioutil"
+   "fmt"
 )
+const LOCAL_QUEUE = "local"
 
 type storageModeConf struct{
    ServerPort string
@@ -38,7 +40,9 @@ type Config struct {
    Scheduler    schedulerConf
 }
 
-func(c *Config) Load(path string) (error){
+var Conf Config
+
+func (c *Config) LoadConfig(path string) (error){
 
    b, err := ioutil.ReadFile(path)
 
@@ -49,13 +53,18 @@ func(c *Config) Load(path string) (error){
    if _, err := toml.Decode(string(b), c); err != nil {
       return err
    }
+
+   if c.Queue.Mode == LOCAL_QUEUE && c.Queue.Local.Capacity <= 0 {
+      return fmt.Errorf("Local Queue Capacity Empty")
+   }
+
+   if len(c.Scheduler.SeedUrls) == 0 {
+      return fmt.Errorf("No Seed Urls")
+   }
+
+   if c.Scheduler.WorkerPool < 1 {
+      return fmt.Errorf("Invalid Number of Worker")
+   }
+
    return nil
 }
-
-/*var Conf Config
-func init(){
-   Conf.Queue.Mode = "local"
-   Conf.Queue.Local.Capacity = 1000
-   Conf.Storage.Mode = "local"
-   Conf.Storage.Mode = "local"
-}*/

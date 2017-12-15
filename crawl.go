@@ -1,17 +1,16 @@
 package main
 
 import (
-	//"fmt"
-	//"github.com/tokwii/crawl/fetcher"
-	//"github.com/tokwii/crawl/queue"
-	//"github.com/tokwii/crawl/scheduler"
-	//"github.com/tokwii/crawl/config"
-	"time"
-	"fmt"
 	"github.com/tokwii/crawl/scheduler"
+	"github.com/tokwii/crawl/config"
+	"fmt"
+	"time"
 	"encoding/xml"
+	"io/ioutil"
 	"os"
 )
+
+const CONFIG_FILE  = "config/settings.toml"
 
 func main()  {
 	// If the Buffer is Smaller than the links found. It will be blocked ... To try to read from the Buffer
@@ -19,43 +18,31 @@ func main()  {
 	// Recieve on the buffer is is blocked when it is emtpy
 	// We need some sort of Pool of fetchers to read continoulys for the worker Q until empty
 	// Crazy !! Create a go routine for each taskQ
-	//taskQueue := queue.InitTaskQueue(1000)
-	//taskQueue.Push()
-	/*result, err := fetcher.FetchURL("http://tomblomfield.com", false, taskQueue)
 
-	taskQueue.Flush()
-	taskQueue.Close()
+	err := config.Conf.LoadConfig(CONFIG_FILE)
 
 	if err != nil {
+		fmt.Println(err)
+		os.Exit(-1)
+
 	}
 
-	fmt.Println(result.Links)*/
-
-
-	//numWorkers int, taskQCapacity int, seedUrl string
 	startTime := time.Now()
-	s := scheduler.InitSchedule(10, 1000000, "http://tomblomfield.com")
+	s := scheduler.InitSchedule(config.Conf.Scheduler.WorkerPool,
+					config.Conf.Scheduler.SeedUrls)
 	s.Schedule()
 	endTime := time.Now()
 	diff := endTime.Sub(startTime)
 	fmt.Println("total time taken ", diff.Seconds(), "seconds")
 
-	xmlBytes, err := xml.MarshalIndent(s.AggrResult.CreateSiteMap() ,"  ", "    ")
+	xmlBytes, err := xml.MarshalIndent(s.CStorage.CreateSiteMap() ,"  ", "    ")
 
 	if err != nil {
-		fmt.Printf("error: %v\n", err)
+		fmt.Errorf("error: %v\n", err)
 	}
+
 	xmlstring := []byte(xml.Header + string(xmlBytes))
-	os.Stdout.Write(xmlstring)
-
-	// Config ..... Config ....
-	/*var c config.Config
-	err := c.Load("config/settings.toml")
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(c.Queue.Mode)
-	fmt.Println(c.Storage.Mode)
-	fmt.Println(c.Storage.Local)*/
-
+	//os.Stdout.Write(xmlstring)
+	ioutil.WriteFile("sitemap.xml", xmlstring, 0440)
 }
+

@@ -16,3 +16,9 @@ CMakeLists.txt
 
 # Html
 *.html
+
+#XMl
+.xml
+
+#
+crawl

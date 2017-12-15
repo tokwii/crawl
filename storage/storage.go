@@ -4,8 +4,6 @@ import (
 	"github.com/tokwii/crawl/config"
 	"github.com/tokwii/crawl/common"
 	"sync"
-	"fmt"
-	"os"
 )
 
 const LOCAL_STORAGE = "local"
@@ -16,6 +14,7 @@ type Storage interface {
 	Contains(string) bool
 	Add(string, map[string][]string)
 	CreateSiteMap() common.Sitemap
+	Get(string) (map[string][]string, bool)
 }
 
 type CrawlerStorage struct {
@@ -43,22 +42,19 @@ func (s *CrawlerStorage) Add (key string, value map[string][]string){
 	s.store.Add(key, value)
 }
 
+func (s *CrawlerStorage) Get(key string) (map[string][]string, bool){
+	res, ok := s.store.Get(key)
+	return res, ok
+}
+
 func (s *CrawlerStorage) CreateSiteMap () (common.Sitemap){
 	return s.store.CreateSiteMap()
 }
 
 func build() *CrawlerStorage{
 
-	var c config.Config
-	err := c.Load("config/settings.toml")
-	if err != nil {
-  		fmt.Errorf("error: %v\n", err)
-		os.Exit(-1)
-	}
-
 	cs := CrawlerStorage{}
-
-	storageMode := c.Storage.Mode
+	storageMode := config.Conf.Storage.Mode
 
 	switch storageMode {
 	case LOCAL_STORAGE:
